@@ -9,10 +9,21 @@ exports.index = function(req,res) {
 exports.tampilandatasiswa = function(req, res){
     connetion.query('SELECT * FROM mahasiswa', function (error,rows,fields){
         if (error){
-            connetion.log(error);
+            console.log(error);
 
         }else {
             response.ok (rows,res)
         }
     });
 };
+exports.tampilanid = function(req, res){
+    let id = req.params.id;
+    connetion.query('SELECT * FROM mahasiswa WHERE id_mahasiswa =?', [id],
+        function (error,rows,fields){
+        if (error){
+            console.log(error);
+
+        }else {
+            response.ok (rows,res)
+        }
+    });}
