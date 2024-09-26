@@ -43,3 +43,19 @@ exports.tampilanid = function(req, res){
         
     });
 }
+exports.editMahasiswa = function (req,res){
+    var id = req.body.id_mahasiswa;
+    var nim = req.body.nim ;
+    var nama = req.body.nama;
+    var angkatan = req.body.angkatan;
+    connection.query('UPDATE mahasiswa SET nim =?, nama=?, angkatan=? WHERE id_mahasiswa=?', [nim,nama,angkatan,id],
+        function (error,rows,fields){
+            if (error){
+                console.log(error);
+    
+            }else {
+                response.ok ("berhasil ubah data", res)
+            }
+            
+        });
+    }
