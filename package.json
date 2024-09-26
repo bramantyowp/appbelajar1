@@ -12,7 +12,7 @@
   },
   "keywords": [
     "rest",
-    "api",
+    "api", 
     "nodejs"
   ],
   "author": "bram",
@@ -20,10 +20,5 @@
   "bugs": {
     "url": "https://github.com/bramantyowp/appbelajar1/issues"
   },
-  "homepage": "https://github.com/bramantyowp/appbelajar1#readme",
-  "dependencies": {
-    "body-parser": "^1.20.3",
-    "express": "^4.21.0",
-    "mysql": "^2.18.1"
-  }
+  "homepage": "https://github.com/bramantyowp/appbelajar1#readme"
 }
